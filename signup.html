@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background-color: whitesmoke;
+        }
+
+        .container {
+            width: 70%;
+            background: white;
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+        }
+
+        .left {
+
+            background-color: #2872A1;
+            color: aliceblue;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left h1 {
+            font-size: 200%;
+            margin-bottom: 1%;
+        }
+
+        .left p {
+            line-height: 30px;
+            font-size: 17px;
+        }
+
+        .menu {
+            margin-top: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu button {
+            padding: 3% 2%;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: aliceblue;
+            color: #26688f;
+            font-size: 100%;
+        }
+
+        .right {
+            padding: 7%;
+            color: #2872A1;
+            background-color: aliceblue;
+        }
+
+        .select {
+            margin-top: 10px;
+            width: 60%;
+            margin-left: 20%;
+            padding: 16px;
+            border: none;
+            border-radius: 14px;
+            background: #26688f;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .form {
+            display: none;
+        }
+        #login {
+            display: none;
+        }
+
+        .form h2 {
+            font-size: 150%;
+            color: #26688f;
+            margin-bottom: 2%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+        }
+.grid button{
+width: 100%;
+margin-left: 0;
+}
+        .input {
+            margin-bottom: 5%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 1%;
+            color: #323232;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #939393;
+            border-radius: 7px;
+            font-size: 120%;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #26688f;
+        }
+
+        .select {
+            width: 40%;
+        }
+
+        
+
+        .submit {
+            margin-top: 10px;
+            width: 60%;
+            margin-left: 20%;
+            padding: 16px;
+            border: none;
+            border-radius: 14px;
+            background: #26688f;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .link {
+            margin-top: 10%;
+            margin-bottom: 47%;
+            color: #26688f;
+            cursor: pointer;
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding: 0;
+                font-size: 80%;
+            }
+
+            .container {
+                width: 100%;
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                padding: 35px;
+            }
+
+            .left .menu {
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 10%;
+                justify-content: space-evenly;
+            }
+
+            .left button {
+                width: 45%;
+            }
+
+            .left .menu a {
+                width: 95%;
+                font-size: 110%;
+            }
+
+            .left .menu a button {
+                width: 100%;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            input,
+            select {
+                padding: 8px;
+                font-size: 120%;
+            }
+
+            .input {
+                margin-bottom: 2%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Account Portal</h1>
+            <p> Create an account, login, or recover password. </p>
+            <div class="menu">
+                <button onclick="
+                    document.getElementById('signup').style='display:block'
+                    document.getElementById('login').style='display:none'                    
+                    document.getElementById('applicant_login').style='display:none'
+                    document.getElementById('recruiter_login').style='display:none'
+                    "> Sign Up </button>
+                <button onclick="
+                    document.getElementById('login').style='display:block'
+                    document.getElementById('signup').style='display:none'                    
+                    document.getElementById('applicant_signup').style='display:none'
+                    document.getElementById('recruiter_signup').style='display:none'
+                    "> login </button>
+                <a href="index.html" style="text-decoration: none; color: aliceblue;">← Back to Home Page</a>
+            </div>
+        </div>
+
+        <div class="right">
+
+
+
+            <div class="login_form" id="signup">
+                <div class="grid">
+                    <button class="select" onclick="
+                    document.getElementById('recruiter_signup').style='display:block'
+                    document.getElementById('applicant_signup').style='display:none'
+                    document.getElementById('signup').style='display:none'
+                    "> Sign Up As Recruiter</button>
+                    <button class="select" onclick="
+                    document.getElementById('applicant_signup').style='display:block'
+                    document.getElementById('recruiter_signup').style='display:none'
+                    document.getElementById('signup').style='display:none'
+                    "> Sign Up As Applicant </button>
+
+                </div>
+            </div>
+
+            <div class="form" id="recruiter_signup">
+                <h2>Create Recruiter Account</h2>
+                <div class="grid">
+                    <div class="input">
+                        <label>Company Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>CIN / GST no.</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="input">
+                        <label>Contact</label>
+                        <input type="tel">
+                    </div>
+                    <div class="input">
+                        <label> Aalternate Contact (Optional)</label>
+                        <input type="tel">
+                    </div>
+                </div>
+                <div class="input">
+                    <label>Company Size</label>
+                    <select>
+                        <option>0-100</option>
+                        <option>101-300</option>
+                        <option>301+</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label>Sector</label>
+                    <select>
+                        <option>Select</option>
+                        <option>College</option>
+                        <option>University</option>
+                        <option>IT Sector</option>
+                        <option>Managment</option>
+                        <option>Civil</option>
+                        <option>Law & Order</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="grid">
+                    <div class="input">
+                        <label>Create Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="input">
+                        <label>Confirm Password</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <button class="submit"
+                onclick="alert('singup successfull')
+                document.getElementById('recruiter_login').style='display:block'
+                    document.getElementById('recruiter_signup').style='display:none'
+                ">    CREATE
+                </button>
+                <br><br>
+                <a href="signup.html" style="text-decoration: none; color: rgb(0, 75, 132);">← Back</a>
+
+            </div>
+
+            <div class="form" id="applicant_signup">
+                <h2>Create Applicant Account</h2>
+               
+                <div class="grid">
+                    <div class="input">
+                        <label>Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Surname</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="input">
+                        <label>Contact</label>
+                        <input type="tel">
+                    </div>
+                </div>
+                <div class="input">
+                    <label>Occupation</label>
+                    <select>
+                        <option>Student</option>
+                        <option>Unemployed</option>
+                        <option>Employed</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label>Highest Qualification</label>
+                    <select>
+                        <option>10th</option>
+                        <option>12th</option>
+                        <option>UG</option>
+                        <option>PG</option>
+                    </select>
+                </div>
+                <div class="grid">
+                    <div class="input">
+                        <label>Create Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="input">
+                        <label>Confirm Password</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <button class="submit"
+                onclick="alert('singup successfull')
+                document.getElementById('applicant_login').style='display:block'
+                    document.getElementById('applicant_signup').style='display:none'
+                ">    CREATE
+                </button>
+                <br><br>
+                <a href="signup.html" style="text-decoration: none; color: rgb(0, 75, 132);">← Back</a>
+
+            </div>
+
+
+            <div class="login_form" id="login">
+                <div class="grid">
+                    <button class="select" onclick="
+                    document.getElementById('recruiter_login').style='display:block'
+                    document.getElementById('applicant_login').style='display:none'
+                    document.getElementById('login').style='display:none'
+                    "> Login As Recruiter</button>
+                    <button class="select" onclick="
+                    document.getElementById('applicant_login').style='display:block'
+                    document.getElementById('recruiter_login').style='display:none'
+                    document.getElementById('login').style='display:none'
+                    ">Login As Applicant </button>
+                </div>
+            </div>
+
+            <div class="form" id="recruiter_login">
+  <h2>Recruiter Login</h2>
+                    <div class="input">
+                        <label>Enter id</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Enter Password</label>
+                        <input type="password">
+                    </div>
+               <a href="DASHBOARD/admindashboard.html/Rdashboard.html"> <button class="submit" onclick="
+               alert('Login successfull')">
+                    Login
+                </button></a>
+                <br><br>
+                                <a href="signup.html" style="text-decoration: none; color: rgb(0, 75, 132);">← Back</a>
+
+            </div>
+
+            <div class="form" id="applicant_login">
+                  <h2>Applicant Login</h2>
+
+                    <div class="input">
+                        <label>Enter id</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Enter Password</label>
+                        <input type="password">
+                    </div>
+
+               <a href="DASHBOARD/studentdashboard.html/Sdashboard.html"> <button class="submit" onclick="
+               alert('Login successfull')">
+                    Login
+                </button></a>
+                <br><br>
+                <a href="signup.html" style="text-decoration: none; color: rgb(0, 75, 132);">← Back</a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

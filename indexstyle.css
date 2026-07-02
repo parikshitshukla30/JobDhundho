@@ -1,0 +1,1054 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    scroll-behavior: smooth;
+    font-family: serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    width: 95%;
+    padding: 0% 2% 0% 3%;
+    height: 60px;
+    font-size: 120%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2872A1;
+    color: whitesmoke;
+    position: fixed;
+    z-index: 999;
+}
+
+.headeropen {
+    width: 11%;
+    justify-content: space-between;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: #2872A1;
+    background-color: #CBDDE9;
+    padding: 0.5% 2% 0.5% 4%;
+}
+
+#sidenavopen,
+#sidenavclose {
+    display: none;
+}
+
+#hiddennav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+#navli {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 70%;
+    font-family: Georgia;
+    margin-left: 30%;
+    align-items: center;
+}
+
+#navli li {
+    margin: 0% 1%;
+}
+
+#navli a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.but {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signup {
+    margin: 15px 0px;
+    height: 30px;
+    padding: 5px 10px;
+    font-family: Georgia;
+    background-color: #CBDDE9;
+    color: #2872A1;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.home {
+
+    color: #165982;
+    /* background-color: #CBDDE9; */
+    width: 100%;
+    text-align: center;
+    font-size: 170%;
+    padding: 9% 0;
+}
+
+.form {
+
+    background-color: #2873a198;
+    padding: 2% 1%;
+    border-radius: 10px;
+    width: 55%;
+    margin-left: 22.5%;
+
+}
+
+.home form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home input,
+select {
+    width: 20%;
+    padding: 1% 1%;
+    border-radius: 5px;
+    border: none;
+}
+
+.home form button {
+
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #0011ffb9;
+    border: none;
+}
+
+.home form button a {
+    padding: 1% 0%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-style: bold;
+    font-size: 120%;
+}
+
+
+.homelink {
+    width: 65%;
+    margin-left: 18%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    align-items: center;
+}
+
+.homelink a {
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5% 1%;
+    background-color: #2872A1;
+    color: aliceblue;
+}
+
+.homelink p {
+    font-size: 120%;
+}
+
+.homepartition {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: x-large;
+    padding: 2% 5%;
+    background-color: #2872A1;
+    color: aliceblue;
+}
+
+.homepartition b {
+    font-size: 200%;
+}
+
+.OPsection {
+    padding: 4% 8%;
+    /* background-color: #CBDDE9; */
+}
+
+.OPheading {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.OPheading h1 {
+    color: #0f172a;
+    font-size: 280%;
+}
+
+.OPheading p {
+    font-size: 150%;
+    color: #64748b;
+}
+
+.Opportunities {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.jobCard {
+    width: 30%;
+    border-radius: 15px;
+    border: 1px solid #2872A1;
+    transition: .35s;
+    padding: 1%;
+    margin-bottom: 0.75%;
+    background-color: aliceblue;
+}
+
+.jobCard:hover {
+    transform: scale(1.04)
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company {
+    display: flex;
+    gap: 10px;
+}
+
+.company img {
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.company span {
+    color: #667085;
+}
+
+.company h2 {
+    margin-top: 1%;
+    font-size: 160%;
+}
+
+.bookmark img {
+    cursor: pointer;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.tags span {
+    background-color: #2872A1;
+    color: aliceblue;
+    padding: 1% 3%;
+    border-radius: 8px;
+}
+
+.details {
+    margin-top: 2%;
+    color: #667085;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+.details span {
+    width: 40%;
+}
+
+.salary {
+    font-weight: 700;
+    color: black;
+}
+
+.bottom {
+    margin-top: 3%;
+    padding: 2% 3%;
+    border-top: 1px solid #c8c8c8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2872A1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: aliceblue;
+}
+
+.bottom a {
+    background-color: aliceblue;
+    color: #2872A1;
+    border: none;
+    padding: 2% 3%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bottom a button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.view {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.viewBtn {
+    background-color: #2872A1;
+    color: aliceblue;
+    border: none;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.Categorysection {
+    padding: 4% 8%;
+    background-color: #2872A1;
+}
+
+
+.catagoryheading {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.catagoryheading h1 {
+    color: aliceblue;
+    font-size: 280%;
+}
+
+.catagoryheading p {
+    font-size: 150%;
+    color: #CBDDE9;
+}
+
+.category {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.categorybox {
+    width: 22%;
+    display: flex;
+    gap: 2%;
+    font-size: 130%;
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: #CBDDE9;
+    border-radius: 10px;
+}
+
+.categorybox img {
+    width: 25%;
+    border-radius: 10px;
+}
+
+.categorybox p {
+    margin-left: 3%;
+}
+
+.viewlightBtn {
+    color: #2872A1;
+    background-color: #CBDDE9;
+    border: none;
+    padding: 1% 3%;
+    border-radius: 10px;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.Employesection {
+    padding: 4% 8%;
+    /* background-color: #CBDDE9; */
+    text-align: center;
+}
+
+.employee {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.employeebox {
+    width: 22%;
+    border-radius: 15px;
+    border: 1px solid #dfe6ef;
+    transition: .35s;
+    padding: 1%;
+    margin-bottom: 0.75%;
+    background-color: aliceblue;
+}
+
+.employeebox img {
+    border-radius: 10px;
+    height: 70px;
+    width: 100px;
+}
+
+.Employesection b {
+    border-radius: 8px;
+    background-color: aquamarine;
+    color: green;
+    padding: 0% 1%;
+}
+
+.Storiessection {
+    text-align: center;
+    padding: 5% 0% 5% 0%;
+    color: aliceblue;
+    background-color: whitesmoke;
+
+
+}
+
+.Storiessectionheader {
+    color: #2872A1;
+}
+
+.Stories {
+    padding: 0% 5% 2% 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Storiesbox {
+    width: 28%;
+    text-align: left;
+    border-radius: 10px;
+    padding: 2%;
+    font-size: 120%;
+    border: 2px solid rgb(146, 146, 146);
+    background-color: #2872A1;
+    margin-bottom: 1%;
+}
+
+.Storiesbox hr {
+    margin: 2% 0%;
+    background-color: #2872A1;
+}
+
+#contact {
+    background-color: #2872A1;
+    color: aliceblue;
+    padding-top: 2%;
+
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    padding: 2% 0% 5% 0%;
+    background-color: #2872A1;
+}
+
+.contact form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact input {
+    width: 87%;
+    padding: 1.5%;
+    margin: 2% 5% 2% 5%;
+    border-radius: 5px;
+    border: 0.5px solid white;
+}
+
+.contact button {
+    width: 30%;
+    margin: 2% 30%;
+    padding: 1.5%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+}
+
+.detail {
+    width: 40%;
+}
+
+.detail fieldset {
+    display: flex;
+    padding: 0% 0% 2% 3%;
+}
+
+.detail fieldset table {
+    margin: 0% 2% 1% 2%;
+}
+
+.detail fieldset iframe {
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #2872A1;
+    color: white;
+    padding: 5%;
+    font-size: 120%;
+    display: flex;
+}
+
+.fleft {
+    width: 30%;
+    text-align: left;
+    list-style: none;
+}
+
+.fleft a {
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.462);
+    padding: 1% 2%;
+    margin: 1% 2%;
+}
+
+.fright {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.frsub {
+    list-style: none;
+    text-align: left;
+}
+
+.frsub li {
+    margin: 10% 0% 0% 0%;
+}
+
+.mainfooter {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #0f172a;
+    padding: 2% 0 2% 8%;
+    font-size: 120%;
+}
+
+.mainfooter div {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body button:hover {
+    transform: scale(1.1);
+}
+
+section {}
+
+.recenthiredsection {
+    width: 94%;
+    background-color: #2872A1;
+    padding: 4% 3%;
+    text-align: center;
+    gap: 25px;
+}
+
+.recenthiredheader {
+    color: whitesmoke;
+}
+.recenthiredheader p,.recenthiredheader h3 {
+    margin-bottom: 0% ;
+}
+
+.recenthired {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.recenthiredbox {
+    width: 20%;
+    background: aliceblue;
+    border-radius: 12px;
+    padding: 1% 2%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.recenthiredbox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.recenthiredbox img {
+    width: 70%;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid #2872A1;
+    background-size: cover;
+}
+
+.recenthiredbox h3 {
+    color: #222;
+}
+
+.recenthiredbox p {
+    color: #666;
+}
+
+.company {
+    padding: 1%;
+    justify-content: center;
+}
+
+
+.recenthired .company {
+    background-color: #2872A1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 1%;
+    color: whitesmoke;
+}
+
+
+/* css for laptop finish */
+
+
+
+@media (max-width:800px) {
+
+    header {
+        flex-direction: column;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 110%;
+    }
+
+    .headeropen {
+        width: 95%;
+        height: 50px;
+        padding: 0% 3% 0% 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    .headeropen h3 {
+        text-align: left;
+        font-size: 150%;
+    }
+
+    #sidenavopen {
+        display: block;
+    }
+
+    #sidenavclose {
+        display: none;
+        height: 50px;
+    }
+
+    #sidenavopen,
+    #sidenavclose {
+        padding: 0%;
+        font-size: 150%;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+    }
+
+    #hiddennav {
+        border-top: 2px solid black;
+        width: 106.8%;
+        flex-direction: column;
+        display: none;
+        margin-left: -2.5%;
+        padding: 0%;
+        padding-bottom: 3%;
+        background-color: #f2fdff;
+        z-index: 999;
+    }
+
+    #navli {
+        text-align: center;
+        flex-direction: column;
+        margin-left: 15%;
+        padding: 0%;
+        margin-bottom: 1%;
+    }
+
+    #navli li {
+        margin: 0%;
+        padding: 2%;
+        font-size: 110%;
+    }
+
+    #navli a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .but {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .signup,
+    .login {
+        border: none;
+        width: 40%;
+        padding: 1%;
+        font-size: 90%;
+        margin: 1% 30%;
+    }
+
+    .home {
+        width: 96%;
+        padding: 25% 2% 15% 2%;
+    }
+
+    .home h1 {
+        font-size: 130%;
+        margin: 3%;
+    }
+
+    .home p {
+        margin: 0% 5%;
+        font-size: 60%;
+    }
+
+    .form {
+        padding: 5% 0%;
+        border-radius: 10px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .home form {
+        flex-direction: column;
+        font-size: 80%;
+    }
+
+    .home input,
+    select {
+        font-size: 65%;
+        height: 30px;
+        width: 85%;
+        margin: 1% 5%;
+        padding: 1% 0% 1% 5%;
+    }
+
+    select {
+        width: 90%;
+        height: 40px;
+    }
+
+    .home form button {
+        margin: 3% 0 0 37.5%;
+        width: 25%;
+    }
+
+    .homelink {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homelink p {
+        font-size: 100%;
+    }
+
+    .homelink a {
+        width: 80%;
+        margin-left: 7.5%;
+        padding: 1.5% 1%;
+        margin: 1%;
+    }
+
+    .homepartition {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    .homepartition b {
+        font-size: 130%;
+    }
+
+    .OPsection {
+        padding: 6% 4%;
+        font-size: 80%;
+    }
+
+    .OPheading h1 {
+        margin-bottom: 3%;
+    }
+
+    .Opportunities {
+        width: 100%;
+    }
+
+    .jobCard {
+        width: 100%;
+        padding: 3%;
+        margin-bottom: 3%;
+        font-size: 90%;
+    }
+
+    .company div span {
+        font-size: 120%;
+    }
+
+    .details {
+        margin: 3% 5%;
+        font-size: 110%;
+        gap: 8px;
+    }
+
+    .bottom {
+        font-size: 120%;
+    }
+
+    .bottom button {
+        width: 30%;
+    }
+
+    .viewBtn {
+        padding: 3% 5%;
+        border-radius: 10px;
+        font-size: 120%;
+    }
+
+    .Categorysection {
+        padding: 4% 3%;
+        background-color: #2872A1;
+        font-size: 90%;
+    }
+
+    .catagoryheading {
+        font-size: 80%;
+    }
+
+    .category {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    .categorybox {
+        width: 46%;
+        display: flex;
+        font-size: 110%;
+        padding: 2% 0% 2% 3%;
+        margin-bottom: 2%;
+        flex-direction: column;
+    }
+
+    .categorybox img {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .categorybox p {
+        margin: 5% 0%;
+        color: #0f172a;
+    }
+
+    .Employesectionheader {
+        font-size: 80%;
+    }
+
+    .Employesection {
+        padding: 4% 4%;
+        font-size: 80%;
+    }
+
+    .employee {
+        gap: 10px;
+    }
+
+    .employeebox {
+        width: 46%;
+        padding: 2% 1%;
+    }
+
+    .employeebox h2 {
+        font-size: 120%;
+        margin-bottom: 2%;
+    }
+
+    .Employesection a {
+        padding: 1% 4%;
+    }
+
+    .recenthiredsection {
+        padding: 4%;
+        font-size: 80%;
+    }
+
+    .recenthiredbox {
+        width: 40%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+
+    .Storiessection {
+        padding: 5% 2%;
+
+    }
+
+    .Storiessectionheader {
+        font-size: 80%;
+    }
+
+    .Stories {
+        padding: 0% 5% 2% 0%;
+        flex-direction: column;
+        font-size: 80%;
+    }
+
+    .Storiesbox {
+        width: 98%;
+        margin: 0% 0% 3% 0%;
+        padding: 1% 3%;
+
+    }
+
+    .Storiesbox hr {
+        margin: 2% 0%;
+    }
+
+    #contact {
+        padding-top: 5%;
+        font-size: 75%;
+    }
+
+    .contact {
+        background-color: #2872A1;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contact form {
+
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .detail {
+        width: 90%;
+        margin: 0% 5%;
+    }
+
+    .detail fieldset {
+        flex-direction: column;
+        font-size: 120%;
+        margin: 4% 0%;
+    }
+
+    .detail table {
+        margin: 2% 0%;
+    }
+
+    footer {
+        flex-direction: column;
+        background-color: #2872A1;
+
+        font-size: 105%;
+    }
+
+    .fleft {
+        width: 100%;
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+        border-bottom: 2px solid aliceblue;
+    }
+
+    .fright {
+        flex-direction: column;
+    }
+
+    .frsub {
+        margin-bottom: 5%;
+    }
+
+    .frsub li {
+        margin: 2% 0% 0% 0%;
+    }
+
+    .mainfooter {
+        flex-direction: column;
+        padding: 2% 0 2% 5%;
+        font-size: 110%;
+    }
+
+    .mainfooter div {
+        flex-direction: column;
+    }
+
+    .mainfooter p {
+        margin: 2% 1%;
+    }
+
+    .worksection {
+        padding: 10% 1%;
+    }
+
+    .selector {
+        width: 60%;
+        margin-left: 20%;
+        height: 30px;
+    }
+
+    .selector p {
+        padding: 1.5%;
+    }
+
+    .work {
+        padding: 0% 5% 2% 4%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .workbox {
+        width: 90%;
+        padding: 3%;
+        margin: 2% 2.5%;
+        font-size: 120%;
+    }
+
+    .recenthiredbox {
+        width: 100%;
+    }
+
+    .recenthiredsection {
+        width: 94%;
+        padding: 4% 3%;
+        gap: 0;
+    }
+
+    .recenthiredbox .company {
+        padding: 2%;
+    }
+}
+
+/* css fpr mobile finish  */

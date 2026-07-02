@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Premium Subscription</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin-bottom: 3%;
+            padding-top: 100px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #247fb4;
+        }
+
+        .hero p {
+            color: #9aa7b2;
+            font-size: 18px;
+
+        }
+
+        /* CARDS */
+        .pricing {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 340px;
+            background: #182941;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #232c36;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+            transition: .3s;
+            font-size: 100%;
+            color: #d4dde5;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #3aaeff;
+        }
+
+        .featured {
+            border: 2px solid #3aaeff;
+            transform: scale(1.04);
+        }
+
+        .plan {
+            font-size: 34px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .badge {
+            width: 50%;
+            display: inline-block;
+            padding: 8px 16px;
+            background: #3aaeff;
+            color: #07131d;
+            font-size: 40%;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 62px;
+            font-weight: bold;
+            color: #63c7ff;
+            margin-bottom: 10px;
+        }
+
+        .price small {
+            color: #9aa7b2;
+            font-size: 20%;
+        }
+
+        .features {
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            list-style: none;
+            padding: 5px 0;
+            color: #d4dde5;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            background: linear-gradient(135deg, #1b85ff, #4fc5ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        .button:hover {
+            opacity: .9;
+        }
+
+        /* FAQ */
+        .faq {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 100px;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 35px;
+
+        }
+
+        .question {
+            background: #223e66;
+            margin-bottom: 18px;
+            border-radius: 18px;
+            border: 1px solid #232c36;
+            padding: 20px;
+        }
+
+        .question summary {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            list-style: inside;
+        }
+
+        .question p {
+            margin-top: 18px;
+            color: #9aa7b2;
+            line-height: 28px;
+        }
+
+        .container2 {
+            margin: 5% 0%;
+        }
+
+        .comparison-box {
+            width: 80%;
+            margin-left: 10%;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 2px solid #d7d9df;
+            font-size: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px 20px;
+            border-bottom: 1px solid #e5e7ee;
+            text-align: center;
+        }
+
+        .feature {
+            width: 35%;
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        .our-col {
+            background: #2d2c8f;
+            color: white;
+        }
+
+        thead {
+            background: whitesmoke;
+        }
+
+
+        .check,
+        .cross {
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 80%;
+        }
+
+        .check {
+            background: #12c74d;
+            color: white;
+        }
+
+        .cross {
+            background: #d8d8d8;
+            color: white;
+        }
+
+        .text {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        tbody tr:hover {
+            background: #e7ecff;
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 70px;
+            text-align: center;
+            color: #76818c;
+        }
+
+        @media(max-width:600px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .card {
+                width: 85%;
+                padding: 3% 4%;
+
+            }
+
+            .featured {
+                transform: none;
+            }
+
+            .comparison-box {
+                width: 99%;
+                margin-left: 0.5%;
+                font-size: 80%;
+            }
+
+            th {
+                padding: 10px 10px;
+            }
+
+            td {
+                padding: 10px 2px;
+            }
+
+            .feature {
+                padding-left: 3%;
+            }
+
+            .text {
+                gap: 5px;
+                text-align: center;
+            }
+
+            .check,.cross {
+                padding: 0;
+                font-size: 100%;
+            }
+
+            .other-head {
+                padding: 0;
+                margin: 0;
+            }
+
+            .benefit {
+                width: 80%;
+            }
+
+            .faq {
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            .question {
+                padding: 3% 4%;
+                border-radius: 10px;
+            }
+
+            .question summary {
+                font-size: 100%;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="headeropen">
+            <h3>JobDhundho</h3>
+            <div class="sidenav">
+                <button id="sidenavopen" onclick=" 
+                document.getElementById('hiddennav').style='display:block';
+                document.getElementById('sidenavclose').style='display:block';
+                document.getElementById('sidenavopen').style='display:none';
+                ">☰</button>
+
+                <button id="sidenavclose" onclick=" 
+                document.getElementById('hiddennav').style='display:none';
+                document.getElementById('sidenavclose').style='display:none';
+                document.getElementById('sidenavopen').style='display:block';
+                ">✕</button>
+            </div>
+        </div>
+
+        <div id="hiddennav">
+            <ul id="navli">
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="index.html#Opportunity">Opportunity</a></li>
+                <li><a href="index.html#companies">Companies</a></li>
+                <li><a href="index.html#Blog">Blog</a></li>
+                <li><a href="index.html#Working">Working</a></li>
+                <li> <a href="index.html#contact"> Contact</a></li>
+
+                <div class="but">
+                    <a href="signup.html"> <button class="signup">Signup</button></a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>
+                Upgrade To
+                <span>Premium</span>
+            </h1>
+            <p> Unlock internships, premium jobs and better career opportunities. </p>
+        </div>
+
+        <div class="pricing">
+            
+            <!-- PLAN A -->
+            <div class="card">
+                <h2 class="plan"> Alpha <div class="badge"> BASIC </div>
+                </h2>
+                <div class="price"> ₹99 <small> per month</small>
+                </div>
+
+                <ul class="features">
+                    <li>✓ All Internship Access</li>
+                    <li>✓ All Articleship Access</li>
+                    <li>✓ All Job Access</li>
+                    <li>✓ Golden Profile</li>
+                    <li>✓ Community Support</li>
+                </ul>
+                <a href="#" class="button"> Choose Plan </a>
+            </div>
+
+            <!-- PLAN B -->
+            <div class="card featured">
+
+                <h2 class="plan">Beta <div class="badge"> MOST POPULAR </div>
+                </h2>
+                <div class="price"> ₹149 <small> per month</small>
+                </div>
+                <ul class="features">
+                    <li>✓ Resume Boost</li>
+                    <li>✓ Early Opportunities</li>
+                    <li>✓ Live Interview</li>
+                    <li>✓ 24*7 Support</li>
+                    <li>✓ Premium Listings</li>
+                    <li>✓ Skill Enhancment</li>
+                    <li>✓ Everything from Basic</li>
+                </ul>
+                <a href="#" class="button"> Choose Plan </a>
+            </div>
+
+            <!-- PLAN C -->
+            <div class="card">
+
+                <h2 class="plan"> Gama <div class="badge"> BEST </div>
+                </h2>
+                <div class="price"> ₹199 <small> per month</small>
+                </div>
+                <ul class="features">
+                    <li>✓ Featured Diamond Profile</li>
+                    <li>✓ Recruiter Access</li>
+                    <li>✓ Experts Mentorship</li>
+                    <li>✓ Recruiter Access</li>
+                    <li>✓ Placement Assistance</li>
+                    <li>✓ Certification</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ Everything from Plan B</li>
+                </ul>
+                <a href="#" class="button"> Go Premium </a>
+            </div>
+
+        </div>
+
+
+        <br><br><br>
+        <div class="container2">
+
+            <div class="hero">
+                <h1>Why Choose Us Over Others?</h1>
+            </div>
+
+            <div class="comparison-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Features & Benefits</th>
+                            <th class="our-col">
+                                JobDhundho </th>
+                            <th class="other-head">
+                                Private Providers
+                            </th>
+                            <th class="other-head">
+                                Govt Providers
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="feature">Job Opportunities</td>
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Verified Jobs
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Archicalship Opportunities
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Portfolio Projects
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Internship Opportunities
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Industry Training
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Resume Building
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Job Ready Guidance
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">
+                                Live Interview
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Fast approch
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                24*7 Support
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Personalized Support
+                                    </span>
+                                </div>
+                            </td>
+
+
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Placement Assistance
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        End-to-End Support
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Experts Mentorship
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        1:1 Guidance
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">
+                                Skill Enhancment
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Skill Based Test
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">
+                                Certification
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        High Value courses
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="feature">
+                                Lifetime Access
+                            </td>
+
+                            <td>
+                                <div class="text">
+                                    <span class="check">✓</span>
+                                    <span class="benefit">
+                                        Continuous Career Support
+                                    </span>
+                                </div>
+                            </td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="faq">
+
+            <h2 class="faq-title">
+                Frequently Asked Questions
+            </h2>
+
+
+            <details class="question">
+                <summary> Can I cancel anytime? </summary>
+                <p> Yes, subscription can be cancelled anytime. </p>
+            </details>
+
+            <details class="question">
+                <summary> Which plan gives best value? </summary>
+                <p> Plan B is balanced for most users. </p>
+            </details>
+
+            <details class="question">
+                <summary> Can I upgrade later? </summary>
+                <p> Yes, upgrade anytime from your account. </p>
+            </details>
+        </div>
+<br><br>
+
+
+    </div>
+
+    <footer id="footer">
+        <div class="fleft">
+            <p><strong>JobDhundho</strong><br><br>
+                Connect with your next career opportunity. HireHub is the modern job board platform for top talent
+                and leading employers.
+            </p><br><br>
+            <li>(555) 492-3847</li><br>
+            <li>hello@hirehub.com</li><br>
+            <li>200 Tech Boulevard, San Francisco, CA 94105</li><br>
+            <a> facebook</a>
+            <a> Linkedin</a>
+            <a> instagram </a>
+
+        </div>
+
+        <div class="fright">
+            <div class="frsub">
+                <li> <strong>For Job Seekers</strong></li>
+                <li>Browse Jobs</li>
+                <li>Companies</li>
+                <li>Career Tips</li>
+                <li>Salary Guide</li>
+            </div>
+
+            <div class="frsub">
+                <li> <strong>For Employers</strong></li>
+                <li>Post a Job</li>
+                <li>Pricing</li>
+                <li>For Employers</li>
+                <li>Hiring Resources</li>
+            </div>
+
+            <div class="frsub">
+                <li><strong>Resources</strong></li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </div>
+
+            <div class="frsub">
+                <li><strong>Company</strong></li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <div class="mainfooter">
+        <p>© 2026 JobDhundho. All rights reserved.</p>
+        <div>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Style Guide</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
