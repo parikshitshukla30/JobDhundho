@@ -4,64 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Profile Page</title>
+    <title>Recruiter Profile</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
             background: #eef3f8;
-            padding: 40px;
-            display: flex;
-            justify-content: center;
+            padding: 40px 15px;
         }
 
         .container {
-            width: 80%;
-            background: aliceblue;
-            padding: 5%;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.15);
         }
 
-        .title {
+        h1 {
             text-align: center;
-            font-size: 35px;
             color: #2872A1;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .section {
-            margin-bottom: 3%;
+            margin-bottom: 30px;
         }
 
         .section h2 {
-            padding-bottom: 0.5%;
-            margin-bottom: 1%;
-            border-bottom: 2px solid #2872A1;
             color: #2872A1;
+            border-bottom: 2px solid #2872A1;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
         }
 
         input,
         select,
         textarea {
             width: 100%;
-            padding: 2%;
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 10px;
-            font-size: 100%;
+            border-radius: 8px;
+            font-size: 15px;
         }
 
         textarea {
@@ -70,52 +67,59 @@
         }
 
         .upload {
-            padding: 25px;
-            background: #f7f9fc;
-            border: 2px dashed #2872A1;
-            border-radius: 15px;
             text-align: center;
+            border: 2px dashed #2872A1;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8fbfd;
         }
 
-        .profile-img {
-            width: 25%;
-
+        .upload img {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            margin: auto;
-            display: block;
-            margin-bottom: 15px;
-            border: 5px solid #2872A1;
+            border: 4px solid #2872A1;
             object-fit: cover;
+            display: block;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+        .profile-section {
+            display: none;
+            margin-top: 20px;
         }
 
         button {
             width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 12px;
+            padding: 15px;
             background: #2872A1;
             color: white;
-            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
             cursor: pointer;
         }
 
         button:hover {
-            background: #19557b;
+            background: #1d5b81;
         }
 
-        @media(max-width:600px) {
-            .grid {
-                grid-template-columns: 1fr;
+        @media(max-width:768px){
+
+            .grid{
+                grid-template-columns:1fr;
             }
 
-            .container {
-                width: 100%;
-                padding: 25px;
+            .container{
+                padding:20px;
             }
 
-            .profile-img {
-                width: 75%;
+            .upload img{
+                width:110px;
+                height:110px;
             }
+
         }
     </style>
 
@@ -123,73 +127,209 @@
 
 <body>
 
-    <div class="container">
-        <h1 class="title"> Profile Page </h1>
-        <div class="section">
-            <h2> Upload Profile Image </h2>
-            <div class="upload">
-                <img src="https://img.freepik.com/premium-vector/personal-id-icon-logo-vector-design_810420-795.jpg"
-                    class="profile-img">
-                <input type="file" accept="image/*">
-            </div>
-        </div>
+<div class="container">
 
-        <div class="section">
-            <h2> Personal Information </h2>
-            <div class="grid">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Surname">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Contact">
-            </div>
-        </div>
+<h1>Recruiter Profile</h1>
 
-        <div class="section">
-            <h2> Work Status </h2>
-            <select>
-                <option> Student </option>
-                <option> Unemployed </option>
-                <option> Employed </option>
-            </select>
-        </div>
+<!-- Logo -->
 
-        <div class="section">
-            <h2> Academic Details ( Optional )</h2>
-            <div class="grid">
-                <input placeholder="10th : xyz">
-                <input placeholder="12th : xyz">
-                <input placeholder="UG : xyz">
-                <input placeholder="PG : xyz">
-            </div>
-        </div>
+<div class="section">
 
-        <div class="section">
-            <h2> Skills </h2>
-            <textarea placeholder="HTML, CSS, JavaScript"></textarea>
-        </div>
+<h2>Profile Logo / Photo</h2>
 
-        <div class="section">
-            <h2> Experience (Optional) </h2>
-            <textarea placeholder="A : xyz
-B : xyz
-C : xyz"></textarea>
-        </div>
+<div class="upload">
 
-        <div class="section">
-            <h2> Caption / About Me (Optional)</h2>
-            <textarea placeholder="Write something about yourself..."></textarea>
-        </div>
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-        <div class="section">
-            <h2> Upload CV </h2>
-            <div class="upload">
-                <input type="file" accept=".pdf,.doc,.docx">
-            </div>
-        </div>
-        <button> Save Profile </button>
+<input type="file">
 
-    </div>
+</div>
+
+</div>
+
+<!-- Recruiter Type -->
+
+<div class="section">
+
+<h2>Recruiter Type</h2>
+
+<select id="type" onchange="showSection()">
+
+<option value="">Select Recruiter Type</option>
+
+<option value="company">Company</option>
+
+<option value="college">College / University</option>
+
+<option value="individual">Individual Recruiter</option>
+
+</select>
+
+</div>
+
+<!-- Common Information -->
+
+<div class="section">
+
+<h2>Basic Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Organization / Recruiter Name">
+
+<input type="email" placeholder="Official Email">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="text" placeholder="Website">
+
+<input type="text" placeholder="State">
+
+<input type="text" placeholder="City">
+
+</div>
+
+<br>
+
+<textarea placeholder="Complete Address"></textarea>
+
+</div>
+
+<!-- Company -->
+
+<div id="company" class="profile-section">
+
+<div class="section">
+
+<h2>Company Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Company Name">
+
+<input type="text" placeholder="Industry">
+
+<input type="text" placeholder="Company Type">
+
+<input type="text" placeholder="Company Size">
+
+<input type="number" placeholder="Founded Year">
+
+<input type="text" placeholder="HR Name">
+
+<input type="text" placeholder="HR Designation">
+
+<input type="text" placeholder="GST Number">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Company"></textarea>
+
+</div>
+
+</div>
+
+<!-- College -->
+
+<div id="college" class="profile-section">
+
+<div class="section">
+
+<h2>College / University Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Institution Name">
+
+<input type="text" placeholder="Institution Type">
+
+<input type="text" placeholder="Affiliated University">
+
+<input type="text" placeholder="NAAC Grade">
+
+<input type="text" placeholder="Placement Officer">
+
+<input type="text" placeholder="Department">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Institution"></textarea>
+
+</div>
+
+</div>
+
+<!-- Individual -->
+
+<div id="individual" class="profile-section">
+
+<div class="section">
+
+<h2>Individual Recruiter</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Full Name">
+
+<input type="text" placeholder="Current Company">
+
+<input type="text" placeholder="Designation">
+
+<input type="number" placeholder="Experience (Years)">
+
+<input type="text" placeholder="LinkedIn Profile">
+
+<input type="text" placeholder="Website">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Yourself"></textarea>
+
+</div>
+
+</div>
+
+<!-- Documents -->
+
+<div class="section">
+
+<h2>Verification Documents</h2>
+
+<div class="upload">
+
+<input type="file">
+
+</div>
+
+</div>
+
+<button>Save Profile</button>
+
+</div>
+
+<script>
+
+function showSection(){
+
+document.getElementById("company").style.display="none";
+document.getElementById("college").style.display="none";
+document.getElementById("individual").style.display="none";
+
+let type=document.getElementById("type").value;
+
+if(type!=""){
+document.getElementById(type).style.display="block";
+}
+
+}
+
+</script>
 
 </body>
-
 </html>
