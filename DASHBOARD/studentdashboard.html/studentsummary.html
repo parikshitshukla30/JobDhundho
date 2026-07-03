@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+        }
+
+        .container {
+            width: 95%;
+            margin: 30px auto;
+        }
+
+        h1 {
+            color: #2872A1;
+            margin-bottom: 25px;
+        }
+
+        /* Summary Cards */
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 38px;
+            color: #2872A1;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Table */
+
+        .tablebox {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+            overflow-x: auto;
+        }
+
+        .tablebox h2 {
+            color: #2872A1;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #2872A1;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        tr:hover {
+            background: #f8f8f8;
+        }
+
+        .applied {
+            color: #2872A1;
+            font-weight: bold;
+        }
+
+        .review {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .shortlisted {
+            color: green;
+            font-weight: bold;
+        }
+
+        .rejected {
+            color: red;
+            font-weight: bold;
+        }
+
+        @media(max-width:768px) {
+
+            .card h2 {
+                font-size: 30px;
+            }
+
+            .card p {
+                font-size: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="summary">
+
+            <div class="card">
+                <h2>18</h2>
+                <p>Total Applications</p>
+            </div>
+
+            <div class="card">
+                <h2>5</h2>
+                <p>Interview Calls</p>
+            </div>
+
+            <div class="card">
+                <h2>7</h2>
+                <p>Shortlisted</p>
+            </div>
+
+            <div class="card">
+                <h2>12</h2>
+                <p>Saved Jobs</p>
+            </div>
+
+            <div class="card">
+                <h2>4</h2>
+                <p>Offers Received</p>
+            </div>
+
+            <div class="card">
+                <h2>2</h2>
+                <p>Jobs Accepted</p>
+            </div>
+
+            <div class="card">
+                <h2>85%</h2>
+                <p>Profile Completion</p>
+            </div>
+
+            <div class="card">
+                <h2>6</h2>
+                <p>Pending Applications</p>
+            </div>
+
+        </div>
+
+
+        <div class="tablebox">
+
+            <h2>Recent Applications</h2>
+
+            <table>
+
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Applied On</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>YashviTech</td>
+                    <td>Frontend Developer</td>
+                    <td>28 Jun 2026</td>
+                    <td class="shortlisted">Shortlisted</td>
+                </tr>
+
+                <tr>
+                    <td>Hira Group</td>
+                    <td>UI Designer</td>
+                    <td>26 Jun 2026</td>
+                    <td class="review">Under Review</td>
+                </tr>
+
+                <tr>
+                    <td>BEC Fertilizers</td>
+                    <td>Web Developer</td>
+                    <td>25 Jun 2026</td>
+                    <td class="applied">Applied</td>
+                </tr>
+
+                <tr>
+                    <td>CSIDC</td>
+                    <td>Data Analyst</td>
+                    <td>22 Jun 2026</td>
+                    <td class="rejected">Rejected</td>
+                </tr>
+
+                <tr>
+                    <td>IIIT Naya Raipur</td>
+                    <td>Lab Assistant</td>
+                    <td>20 Jun 2026</td>
+                    <td class="review">Under Review</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="tablebox">
+
+            <h2>Upcoming Interviews</h2>
+
+            <table>
+
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Date</th>
+                    <th>Mode</th>
+                </tr>
+
+                <tr>
+                    <td>YashviTech</td>
+                    <td>Frontend Developer</td>
+                    <td>05 Jul 2026</td>
+                    <td>Online</td>
+                </tr>
+
+                <tr>
+                    <td>Hira Group</td>
+                    <td>Software Engineer</td>
+                    <td>08 Jul 2026</td>
+                    <td>Offline</td>
+                </tr>
+
+                <tr>
+                    <td>CSIDC</td>
+                    <td>IT Support</td>
+                    <td>10 Jul 2026</td>
+                    <td>Online</td>
+                </tr>
+
+                <tr>
+                    <td>BEC Fertilizers</td>
+                    <td>Web Developer</td>
+                    <td>14 Jul 2026</td>
+                    <td>Offline</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

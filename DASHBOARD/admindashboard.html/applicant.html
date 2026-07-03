@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard - Applicants</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: #2872A1;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        th {
+            background: #2872A1;
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f7fbff;
+        }
+
+        img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .status {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .shortlisted {
+            background: #d8f7df;
+            color: green;
+        }
+
+        .review {
+            background: #fff3cd;
+            color: #9c6a00;
+        }
+
+        .rejected {
+            background: #ffdede;
+            color: red;
+        }
+
+        button {
+            padding: 8px 14px;
+            background: #2872A1;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: .9;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Applicants List</h2>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Experience</th>
+                <th>Skills</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>001</td>
+                <td>
+                    <img src="https://via.placeholder.com/55">
+                </td>
+                <td>Rahul Sharma</td>
+                <td>Frontend Developer</td>
+                <td>rahul@gmail.com</td>
+                <td>9876543210</td>
+                <td>2 Years</td>
+                <td>HTML, CSS, JS</td>
+
+                <td>
+                    <span class="status shortlisted"> Shortlisted </span>
+                </td>
+
+                <td>
+                    <button> View</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>002</td>
+                <td>
+                    <img src="https://via.placeholder.com/55">
+                </td>
+
+                <td>Anjali Verma</td>
+                <td>UI/UX Designer</td>
+                <td>anjali@gmail.com</td>
+                <td>9876541230</td>
+                <td>1 Year</td>
+                <td>Figma, UI</td>
+
+                <td>
+                    <span class="status review"> Under Review </span>
+                </td>
+
+                <td> <button> View</button> </td>
+            </tr>
+
+            <tr>
+                <td>003</td>
+                <td> <img src="https://via.placeholder.com/55"> </td>
+                <td>Amit Patel</td>
+                <td>Backend Developer</td>
+                <td>amit@gmail.com</td>
+                <td>8888888888</td>
+                <td>3 Years</td>
+                <td>Node.js, MySQL</td>
+
+                <td>
+                    <span class="status rejected"> Rejected </span>
+                </td>
+
+                <td>
+                    <button> View </button>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

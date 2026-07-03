@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #eef3f8;
+            padding: 40px 15px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2872A1;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #2872A1;
+            border-bottom: 2px solid #2872A1;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .upload {
+            text-align: center;
+            border: 2px dashed #2872A1;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8fbfd;
+        }
+
+        .upload img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #2872A1;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+        .profile-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #2872A1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d5b81;
+        }
+
+        @media(max-width:768px){
+
+            .grid{
+                grid-template-columns:1fr;
+            }
+
+            .container{
+                padding:20px;
+            }
+
+            .upload img{
+                width:110px;
+                height:110px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Recruiter Profile</h1>
+
+<!-- Logo -->
+
+<div class="section">
+
+<h2>Profile Logo / Photo</h2>
+
+<div class="upload">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<input type="file">
+
+</div>
+
+</div>
+
+<!-- Recruiter Type -->
+
+<div class="section">
+
+<h2>Recruiter Type</h2>
+
+<select id="type" onchange="showSection()">
+
+<option value="">Select Recruiter Type</option>
+
+<option value="company">Company</option>
+
+<option value="college">College / University</option>
+
+<option value="individual">Individual Recruiter</option>
+
+</select>
+
+</div>
+
+<!-- Common Information -->
+
+<div class="section">
+
+<h2>Basic Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Organization / Recruiter Name">
+
+<input type="email" placeholder="Official Email">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="text" placeholder="Website">
+
+<input type="text" placeholder="State">
+
+<input type="text" placeholder="City">
+
+</div>
+
+<br>
+
+<textarea placeholder="Complete Address"></textarea>
+
+</div>
+
+<!-- Company -->
+
+<div id="company" class="profile-section">
+
+<div class="section">
+
+<h2>Company Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Company Name">
+
+<input type="text" placeholder="Industry">
+
+<input type="text" placeholder="Company Type">
+
+<input type="text" placeholder="Company Size">
+
+<input type="number" placeholder="Founded Year">
+
+<input type="text" placeholder="HR Name">
+
+<input type="text" placeholder="HR Designation">
+
+<input type="text" placeholder="GST Number">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Company"></textarea>
+
+</div>
+
+</div>
+
+<!-- College -->
+
+<div id="college" class="profile-section">
+
+<div class="section">
+
+<h2>College / University Information</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Institution Name">
+
+<input type="text" placeholder="Institution Type">
+
+<input type="text" placeholder="Affiliated University">
+
+<input type="text" placeholder="NAAC Grade">
+
+<input type="text" placeholder="Placement Officer">
+
+<input type="text" placeholder="Department">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Institution"></textarea>
+
+</div>
+
+</div>
+
+<!-- Individual -->
+
+<div id="individual" class="profile-section">
+
+<div class="section">
+
+<h2>Individual Recruiter</h2>
+
+<div class="grid">
+
+<input type="text" placeholder="Full Name">
+
+<input type="text" placeholder="Current Company">
+
+<input type="text" placeholder="Designation">
+
+<input type="number" placeholder="Experience (Years)">
+
+<input type="text" placeholder="LinkedIn Profile">
+
+<input type="text" placeholder="Website">
+
+</div>
+
+<br>
+
+<textarea placeholder="About Yourself"></textarea>
+
+</div>
+
+</div>
+
+<!-- Documents -->
+
+<div class="section">
+
+<h2>Verification Documents</h2>
+
+<div class="upload">
+
+<input type="file">
+
+</div>
+
+</div>
+
+<button>Save Profile</button>
+
+</div>
+
+<script>
+
+function showSection(){
+
+document.getElementById("company").style.display="none";
+document.getElementById("college").style.display="none";
+document.getElementById("individual").style.display="none";
+
+let type=document.getElementById("type").value;
+
+if(type!=""){
+document.getElementById(type).style.display="block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
